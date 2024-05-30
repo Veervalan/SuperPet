@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h4>{{data}}</h4>
+<hr>  
+<h4>{{data|upper}}</h4>
+<hr>
+<h4>{{data|lower}}</h4>
+<hr>
+<h4>{{data|first}}</h4>
+<hr>
+<h4>{{data|last}}</h4>
+<hr>
+<h4>{{data|length}}</h4>
+<hr>
+<h4>{{data|wordcount}}</h4>
+<hr>    
+<h4>{{10|add:20 }}</h4>
+<hr>
+
+
+{% endblock %}
