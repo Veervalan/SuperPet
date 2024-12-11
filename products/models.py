@@ -13,15 +13,15 @@ class ProductManager(models.Manager):
     def get_queryset(self):
         #return super().get_queryset().order_by('product_name')
         return ProductQuerySet(self.model)
-    
+
     def RoyalCanin(self):
         return ProductQuerySet(self.model).filter(product_brand='Royal Canin')
-    
+
     def drools(self):
         return ProductQuerySet(self.model).filter(product_brand='drools')
-    
+
 #---------------Custom  Product QuerySet-----------
-    
+
 class ProductQuerySet(models.QuerySet):
     def range(self,start_price,end_price):
         return self.filter(product_price__range=(start_price,end_price))
@@ -56,4 +56,3 @@ class Product(models.Model):
 
     def __str__(self):
         return self.product_name
-
